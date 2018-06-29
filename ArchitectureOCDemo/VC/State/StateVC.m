@@ -7,6 +7,7 @@
 //
 
 #import "StateVC.h"
+#import "DragonFight.h"
 
 @interface StateVC ()
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    DragonFight *fight = [[DragonFight alloc] init];
+    fight.energy = 100;
+    [fight fight];
+    fight.energy = 70;
+    [fight fight];
+    fight.energy = 50;
+    [fight fight];
+    fight.energy = 10;
+    [fight fight];
 }
 
 @end

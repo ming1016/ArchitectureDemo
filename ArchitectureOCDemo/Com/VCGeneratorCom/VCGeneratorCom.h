@@ -16,4 +16,7 @@
 - (UIViewController *)publishVC:(NSDictionary *)dic;
 - (NSString *)publishVCTitle:(NSDictionary *)dic;
 
+- (UIViewController *)stateVC:(NSDictionary *)dic;
+- (NSString *)stateVCTitle:(NSDictionary *)dic;
+
 @end

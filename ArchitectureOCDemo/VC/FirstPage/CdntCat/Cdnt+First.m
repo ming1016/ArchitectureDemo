@@ -16,8 +16,8 @@
     
     // 设置 vc
     // 添加 factoryVC 的按钮
-    NSString *factoryTitle = self.dispatch(CdntAction.clsmtd(@"VCGeneratorCom factoryMethodVCTitle"));
-    UIViewController *factoryVC = self.dispatch(CdntAction.clsmtd(@"VCGeneratorCom factoryMethodVC"));
+    NSString *factoryTitle = self.dispatch(CdntAction.clsmtd(@"VCGeneratorCom stateVCTitle"));
+    UIViewController *factoryVC = self.dispatch(CdntAction.clsmtd(@"VCGeneratorCom stateVC"));
     
     // Publish 按钮
     NSString *publishTitle = [self classMethod:@"VCGeneratorCom publishVCTitle"];

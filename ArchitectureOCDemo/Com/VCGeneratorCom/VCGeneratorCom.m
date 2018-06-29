@@ -9,6 +9,7 @@
 #import "VCGeneratorCom.h"
 #import "FactoryMethodVC.h"
 #import "PublishVC.h"
+#import "StateVC.h"
 
 @implementation VCGeneratorCom
 
@@ -26,6 +27,14 @@
 }
 - (NSString *)publishVCTitle:(NSDictionary *)dic {
     return @"Publish";
+}
+
+- (UIViewController *)stateVC:(NSDictionary *)dic {
+    StateVC *vc = [[StateVC alloc] init];
+    return vc;
+}
+- (NSString *)stateVCTitle:(NSDictionary *)dic {
+    return @"State";
 }
 
 @end
