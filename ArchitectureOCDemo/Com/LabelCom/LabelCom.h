@@ -10,6 +10,6 @@
 
 @interface LabelCom : NSObject
 
-- (UILabel *)configLabel:(NSDictionary *)dic;
+//- (UILabel *)configLabel:(NSDictionary *)dic;
 
 @end

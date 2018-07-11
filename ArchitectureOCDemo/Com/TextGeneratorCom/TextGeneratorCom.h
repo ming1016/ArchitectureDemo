@@ -10,6 +10,6 @@
 
 @interface TextGeneratorCom : NSObject
 
-- (NSString *)gText;
+//- (NSString *)gText;
 
 @end

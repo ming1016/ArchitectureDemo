@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#define CLS(cls) NSStringFromClass((cls))
+#define ACT(s) NSStringFromSelector((s))
+
 @interface CdntAction : NSObject
 
 @property (nonatomic, strong) NSString *classMethod;
@@ -25,5 +28,9 @@
 - (CdntAction *(^)(NSString *))mtd;    // 方法
 - (CdntAction *(^)(NSMutableDictionary *))pa; // 可选：参数
 - (CdntAction *(^)(NSString *))toSt;   // 可选：更改状态
+
+// 能在编译期检查类和方法的方法
++ (CdntAction *(^)(Class))clas;    // 类
+- (CdntAction *(^)(SEL))mted;    // 方法
 
 @end

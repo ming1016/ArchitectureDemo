@@ -10,13 +10,13 @@
 
 @interface VCGeneratorCom : NSObject
 
-- (UIViewController *)factoryMethodVC:(NSDictionary *)dic;
-- (NSString *)factoryMethodVCTitle:(NSDictionary *)dic;
-
-- (UIViewController *)publishVC:(NSDictionary *)dic;
-- (NSString *)publishVCTitle:(NSDictionary *)dic;
-
-- (UIViewController *)stateVC:(NSDictionary *)dic;
-- (NSString *)stateVCTitle:(NSDictionary *)dic;
+//- (UIViewController *)factoryMethodVC:(NSDictionary *)dic;
+//- (NSString *)factoryMethodVCTitle:(NSDictionary *)dic;
+//
+//- (UIViewController *)publishVC:(NSDictionary *)dic;
+//- (NSString *)publishVCTitle:(NSDictionary *)dic;
+//
+//- (UIViewController *)stateVC:(NSDictionary *)dic;
+//- (NSString *)stateVCTitle:(NSDictionary *)dic;
 
 @end

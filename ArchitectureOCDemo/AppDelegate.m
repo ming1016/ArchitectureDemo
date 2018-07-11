@@ -14,9 +14,11 @@
 
 @implementation AppDelegate
 
+NSUInteger ab = (3 + 2) * 2;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    ab = 3;
     return YES;
 }
 

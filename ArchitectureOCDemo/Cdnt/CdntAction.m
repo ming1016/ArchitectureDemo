@@ -70,4 +70,21 @@
     };
 }
 
+// 能在编译期检查的方法
++ (CdntAction *(^)(Class))clas {
+    return ^CdntAction *(Class clas) {
+        CdntAction *act = [[CdntAction alloc] init];
+        act.chainCls = CLS(clas);
+        return act;
+    };
+}
+
+- (CdntAction *(^)(SEL))mted {
+    return ^CdntAction *(SEL mted) {
+        NSString *selStr = ACT(mted);
+        NSString *clearSelStr = [selStr substringToIndex:([selStr length]-1)];
+        self.classMethod = [NSString stringWithFormat:@"%@ %@",self.chainCls, clearSelStr];
+        return self;
+    };
+}
 @end

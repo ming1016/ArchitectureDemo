@@ -10,9 +10,9 @@
 
 @interface AopLogCom : NSObject
 
-- (void)aopAppearLog:(NSDictionary *)dic;
-- (void)aopFactorySetTitle:(NSDictionary *)dic;
-
-- (void)emergeLog:(NSDictionary *)dic;
+//- (void)aopAppearLog:(NSDictionary *)dic;
+//- (void)aopFactorySetTitle:(NSDictionary *)dic;
+//
+//- (void)emergeLog:(NSDictionary *)dic;
 
 @end

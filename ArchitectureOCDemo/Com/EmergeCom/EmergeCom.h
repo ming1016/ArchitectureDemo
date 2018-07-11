@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *const EmergeCom_emergeView = @"EmergeCom emergeView";
+static NSString *const EmergeCom_updateConfirmBtTitle = @"EmergeCom updateConfirmBtTitle";
+static NSString *const EmergeCom_confirmBtTitle = @"EmergeCom confirmBtTitle";
+
 @interface EmergeCom : NSObject
 
 - (UIView *)emergeView:(NSDictionary *)dic;

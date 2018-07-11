@@ -8,22 +8,25 @@
 
 #import "Cdnt+Publish.h"
 
+#import "EmergeCom.h"
+#import "PublishCom.h"
+#import "ButtonCom.h"
+
 @implementation Cdnt (Publish)
 
 - (void)publishInVC:(UIViewController *)vc {
-    
     NSMutableDictionary *dic = Dic.create.key(@"vcView").val(vc.view)
     
     // 起始地
-    .key(@"fromAddressBt").val(self.dispatch(CdntAction.clsmtd(@"ButtonCom configButton").pa(Dic.create.key(@"text").val(@"起始地").key(@"action").val(^(void) {
+    .key(@"fromAddressBt").val(self.dispatch(CdntAction.clas([ButtonCom class]).mted(@selector(configButton1:)).pa(Dic.create.key(@"text").val(@"起始地").key(@"action").val(^(void) {
         // 浮层显示
-        self.dispatch(CdntAction.clsmtd(@"EmergeCom updateConfirmBtTitle").pa(Dic.create.key(@"title").val(@"上地").done));
-        self.dispatch(CdntAction.clsmtd(@"PublishCom showEmergeView").toSt(@"focusFromAddress"));
+        self.dispatch(CdntAction.clsmtd(EmergeCom_updateConfirmBtTitle).pa(Dic.create.key(@"title").val(@"上地").done));
+        self.dispatch(CdntAction.clas([PublishCom class]).mted(@selector(showEmergeView:)).toSt(@"focusFromAddress"));
     }).done)))
     
     // 目的地    
     .key(@"toAddressBt").val(self.dispatch(CdntAction.clsmtd(@"ButtonCom configButton").pa(Dic.create.key(@"text").val(@"前往").key(@"action").val(^(void) {
-        self.dispatch(CdntAction.clsmtd(@"EmergeCom updateConfirmBtTitle").pa(Dic.create.key(@"title").val(@"五道口").done));
+        self.dispatch(CdntAction.clas([EmergeCom class]).mted(@selector(updateConfirmBtTitle:)).pa(Dic.create.key(@"title").val(@"五道口").done));
         self.dispatch(CdntAction.clsmtd(@"PublishCom showEmergeView").toSt(@"focusToAddress"));
     }).done)))
 
@@ -63,6 +66,10 @@
     
     // 观察者管理
     self.observerWithIdentifier(@"publishOk").addObserver(CdntAction.clsmtd(@"PublishCom reset")).addObserver(CdntAction.clsmtd(@"PublishCom checkPublish"));
+    
+    CdntAction *act = CdntAction.clas([ButtonCom class]).mted(@selector(configButton:));
+    act = nil;
+    act.mted(@selector(configButton:));
 }
 
 @end
