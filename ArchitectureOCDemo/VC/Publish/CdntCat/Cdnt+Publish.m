@@ -18,7 +18,7 @@
     NSMutableDictionary *dic = Dic.create.key(@"vcView").val(vc.view)
     
     // 起始地
-    .key(@"fromAddressBt").val(self.dispatch(CdntAction.clas([ButtonCom class]).mted(@selector(configButton1:)).pa(Dic.create.key(@"text").val(@"起始地").key(@"action").val(^(void) {
+    .key(@"fromAddressBt").val(self.dispatch(CdntAction.clas([ButtonCom class]).mted(@selector(configButton:)).pa(Dic.create.key(@"text").val(@"起始地").key(@"action").val(^(void) {
         // 浮层显示
         self.dispatch(CdntAction.clsmtd(EmergeCom_updateConfirmBtTitle).pa(Dic.create.key(@"title").val(@"上地").done));
         self.dispatch(CdntAction.clas([PublishCom class]).mted(@selector(showEmergeView:)).toSt(@"focusFromAddress"));
