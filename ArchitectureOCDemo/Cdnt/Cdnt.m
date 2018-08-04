@@ -31,6 +31,10 @@
 
 @implementation Cdnt
 
+- (void)eval:(NSString *)script {
+    
+}
+
 // ------- State ---------
 - (void)updateCurrentState:(NSString *)state {
     if (state.length < 1) {

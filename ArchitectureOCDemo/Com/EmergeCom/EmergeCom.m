@@ -20,13 +20,13 @@
 
 - (UIView *)emergeView:(NSDictionary *)dic {
     self.emergeView = [UIView new];
-    self.emergeView.backgroundColor = [UIColor redColor];
+    self.emergeView.backgroundColor = [UIColor lightGrayColor];
     self.confirmBt = dic[@"confirmBt"];
     if (self.confirmBt) {
         [self.emergeView addSubview:self.confirmBt];
         [self.confirmBt mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.emergeView);
-            make.size.mas_equalTo(CGSizeMake(100, 40));
+            make.size.mas_equalTo(CGSizeMake(200, 40));
         }];
     }
     return self.emergeView;

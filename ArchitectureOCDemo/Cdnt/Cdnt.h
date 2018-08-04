@@ -10,9 +10,10 @@
 #import "CdntAction.h"
 #import "Dic.h"
 
-
-
 @interface Cdnt : NSObject
+
+/* ------- 解指令执行 ---------- */
+- (void)eval:(NSString *)script;
 
 /* ------- Reducer ------- */
 // Reducer 下面几种是不同的调用写法，最终的执行是一致的。

@@ -36,7 +36,7 @@
         return;
     }
     UIView *topView = [UIView new];
-    topView.backgroundColor = [UIColor redColor];
+    topView.backgroundColor = [UIColor lightGrayColor];
     
     [self.vcView addSubview:topView];
     [topView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -129,11 +129,11 @@
     self.publishBt.backgroundColor = [UIColor redColor];
 }
 - (void)reset:(NSDictionary *)dic {
-    [self.fromAddressBt setTitle:@"起始地" forState:UIControlStateNormal];
+    [self.fromAddressBt setTitle:@"标题" forState:UIControlStateNormal];
     self.fromAddressBt.tag = 0;
-    [self.toAddressBt setTitle:@"前往" forState:UIControlStateNormal];
+    [self.toAddressBt setTitle:@"内容" forState:UIControlStateNormal];
     self.toAddressBt.tag = 0;
-    [self.peopleBt setTitle:@"人数" forState:UIControlStateNormal];
+    [self.peopleBt setTitle:@"价格" forState:UIControlStateNormal];
     self.peopleBt.tag = 0;
     
     [UIView animateWithDuration:0.1 animations:^{
