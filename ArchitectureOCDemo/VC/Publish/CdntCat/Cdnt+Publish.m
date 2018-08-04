@@ -21,19 +21,19 @@
     .key(@"fromAddressBt").val(self.dispatch(CdntAction.clas([ButtonCom class]).mted(@selector(configButton:)).pa(Dic.create.key(@"text").val(@"标题").key(@"action").val(^(void) {
         // 浮层显示
         self.dispatch(CdntAction.clsmtd(EmergeCom_updateConfirmBtTitle).pa(Dic.create.key(@"title").val(@"成长的烦恼").done));
-        self.dispatch(CdntAction.clas([PublishCom class]).mted(@selector(showEmergeView:)).toSt(@"focusFromAddress"));
+        self.dispatch(CdntAction.clas([PublishCom class]).mted(@selector(showEmergeView:)).toSt(@"focusTitle"));
     }).done)))
     
     // 内容
     .key(@"toAddressBt").val(self.dispatch(CdntAction.clsmtd(@"ButtonCom configButton").pa(Dic.create.key(@"text").val(@"内容").key(@"action").val(^(void) {
         self.dispatch(CdntAction.clas([EmergeCom class]).mted(@selector(updateConfirmBtTitle:)).pa(Dic.create.key(@"title").val(@"这个说来话长...").done));
-        self.dispatch(CdntAction.clsmtd(@"PublishCom showEmergeView").toSt(@"focusToAddress"));
+        self.dispatch(CdntAction.clsmtd(@"PublishCom showEmergeView").toSt(@"focusContent"));
     }).done)))
 
     // 价格
     .key(@"peopleBt").val(self.dispatch(CdntAction.clsmtd(@"ButtonCom configButton").pa(Dic.create.key(@"text").val(@"价格").key(@"action").val(^(void) {
         self.dispatch(CdntAction.clsmtd(@"EmergeCom updateConfirmBtTitle").pa(Dic.create.key(@"title").val(@"5元").done));
-        self.dispatch(CdntAction.clsmtd(@"PublishCom showEmergeView").toSt(@"focusPeople"));
+        self.dispatch(CdntAction.clsmtd(@"PublishCom showEmergeView").toSt(@"focusPrice"));
     }).done)))
     
     // 浮层确认选择

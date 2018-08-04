@@ -101,17 +101,17 @@
 }
 
 // 状态管理
-- (void)confirmEmerge_state_focusFromAddress:(NSDictionary *)dic {
+- (void)confirmEmerge_state_focusTitle:(NSDictionary *)dic {
     NSString *title = dic[@"title"];
     [self.fromAddressBt setTitle:title forState:UIControlStateNormal];
     self.fromAddressBt.tag = 1;
 }
-- (void)confirmEmerge_state_focusToAddress:(NSDictionary *)dic {
+- (void)confirmEmerge_state_focusContent:(NSDictionary *)dic {
     NSString *title = dic[@"title"];
     [self.toAddressBt setTitle:title forState:UIControlStateNormal];
     self.toAddressBt.tag = 1;
 }
-- (void)confirmEmerge_state_focusPeople:(NSDictionary *)dic {
+- (void)confirmEmerge_state_focusPrice:(NSDictionary *)dic {
     NSString *title = dic[@"title"];
     [self.peopleBt setTitle:title forState:UIControlStateNormal];
     self.peopleBt.tag = 1;
